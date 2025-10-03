@@ -11,15 +11,17 @@ struct Point {
 	Point(double x, double y) : x(x), y(y){}
 
 	Point operator+(const Point& other) const {
-		return (x + other.x, y + other.y);
+		return Point(x + other.x, y + other.y);
 	}
 
 	Point operator/(double number) const{
-		return (x / number, y / number);
+		return Point(x / number, y / number);
 	}
+
+	friend std::ostream& operator<<(std::ostream& os, Point const& p);
+
+	friend std::istream& operator>>(std::istream& is, Point& p);
+
 };
 
-friend std::ostream& operator<<(std::ostream& os, Point const& p);
-
-friend std::istream& operator>>(std::istream& is, Point& p);
 

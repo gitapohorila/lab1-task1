@@ -1,4 +1,5 @@
-#include <lab1.cpp>
+#include "point.h"
+#include "pointgenerator.h"
 
 int main() {
 

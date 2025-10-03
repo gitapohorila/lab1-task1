@@ -5,6 +5,9 @@
 #include <fstream>
 #include <iostream>
 #include <random>
+#include "point.h"
+
+using namespace std;
 
 class PointGeneration {
 private: 
