@@ -27,9 +27,9 @@ Point PointGeneration::operator()()
 	}
 	else {
 		y = (initial_point + b_i) / 2.0; 
-		initial_point = y;
+		
 	}
-	
+	initial_point = y;
 	count++; 
 	
 	return y;
@@ -74,5 +74,6 @@ void write_in_file(const string& output_path, const vector<Point>& points) {
 	if (f.fail()) {
 		throw ios_base::failure("An error occured");
 	}
+
 
 }
