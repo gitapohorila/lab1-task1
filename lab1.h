@@ -34,8 +34,14 @@ private:
 	Point initial_point;
 	const vector<Point> base_points;
 
-public:
+	mt19937 generator;
+	uniform_int_distribution<> distribution;
+	int count = 0;
 
+public:
+	PointGeneration(Point& x0, const vector<Point>& arr);
+	~PointGeneration();
+	Point operator()();
 
 };
-void write_in_file(const string& output_path, const vector<Points> points);
+void write_in_file(const string& output_path, const vector<Point> points);
