@@ -1,3 +1,5 @@
+// g++ compiler
+
 #include "point.h"
 #include "pointgenerator.h"
 
@@ -17,5 +19,6 @@ int main() {
 	}
 
 	write_in_file(output_file, output_points);
+
 
 }
