@@ -27,4 +27,4 @@ public:
 void read_from_file(const string& file_path, int& n, Point& initial_point, vector<Point>& base_points);
 
 
-void write_in_file(const string& output_path, const vector<Point> points);
+void write_in_file(const string& output_path, const vector<Point>& points);
