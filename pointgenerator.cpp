@@ -35,7 +35,7 @@ Point PointGeneration::operator()()
 	return y;
 }
 
-void read_from_file(const string& file_path, int n, Point& initial_point, vector<Point>& base_points){
+void read_from_file(const string& file_path, int& n, Point& initial_point, vector<Point>& base_points){
     ifstream is(file_path);
 
     if (!is.is_open()) {
@@ -43,17 +43,13 @@ void read_from_file(const string& file_path, int n, Point& initial_point, vector
 	}
 
     is >> n;
-    is >> initial_point.x >> initial_point.y;
+    is >> initial_point;
 
     Point p;
-    while(is >> p.x >> p.y){
+    while(is >> p){
         base_points.push_back(p);
     }
     is.close();
-    if (is.fail()) {
-		throw ios_base::failure("An error occured");
-	}
-    
 }
 
 void write_in_file(const string& output_path, const vector<Point>& points) {
@@ -71,9 +67,5 @@ void write_in_file(const string& output_path, const vector<Point>& points) {
 		throw ios_base::failure("An error occured");
 	}
 	f.close();
-	if (f.fail()) {
-		throw ios_base::failure("An error occured");
-	}
-
-
 }
+
