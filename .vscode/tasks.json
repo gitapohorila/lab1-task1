@@ -1,0 +1,30 @@
+{
+    "tasks": [
+        {
+            "type": "cppbuild",
+            "label": "C/C++: G++ Build All Files",
+            "command": "C:\\msys64\\ucrt64\\bin\\g++.exe", // Використовуйте g++ для C++
+            "args": [
+                "-fdiagnostics-color=always",
+                "-g",
+                "${fileDirname}\\main.cpp",
+                "${fileDirname}\\pointgenerator.cpp",
+                "${fileDirname}\\point.cpp",         
+                "-o",
+                "${fileDirname}\\program.exe" // Вихідний файл
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Task generated to build multi-file project."
+        }
+    ],
+    "version": "2.0.0"
+}
